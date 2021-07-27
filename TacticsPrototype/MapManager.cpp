@@ -21,14 +21,14 @@ MapManager::MapManager(int size)
 	auto rad = 35.0f * DX_PI_F / 180.0f;
 
 	mat_.m[0][0] = cosf(rad);
-	mat_.m[0][1] = cosf(rad);
+	mat_.m[0][1] = sinf(rad);
 	mat_.m[1][0] = -sinf(rad);
-	mat_.m[1][1] = sinf(rad);
+	mat_.m[1][1] = cosf(rad);
 	mat_.m[2][2] = 1.0f;
 
 	auto a = mat_.m[0][0];
-	auto b = mat_.m[0][1];
-	auto c = mat_.m[1][0];
+	auto b = mat_.m[1][0];
+	auto c = mat_.m[0][1];
 	auto d = mat_.m[1][1];
 
 	auto D = a*d - b*c;

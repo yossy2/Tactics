@@ -85,8 +85,8 @@ Matrix MultipleMat(const Matrix& lmat, const Matrix& rmat)
 Vector2f MultipleVec(const Matrix& mat, const Vector2f& vec)
 {
 	Vector2f ret = {};
-	ret.x = mat.m[0][0] * vec.x + mat.m[0][1] * vec.y + mat.m[0][2];
-	ret.y = mat.m[1][0] * vec.x + mat.m[1][1] * vec.y + mat.m[1][2];
+	ret.x = mat.m[0][0] * vec.x + mat.m[1][0] * vec.y + mat.m[2][0];
+	ret.y = mat.m[0][1] * vec.x + mat.m[1][1] * vec.y + mat.m[2][1];
 
 	return ret;
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include "Geometry.h"
 
+
 /// <summary>
 /// マップのマス目一つ一つのクラス
 /// </summary>
